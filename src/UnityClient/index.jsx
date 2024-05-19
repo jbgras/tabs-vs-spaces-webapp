@@ -1,14 +1,16 @@
-import React, { Fragment } from "react";
+import React, { Fragment, version } from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 import styles from "./styles.module.css";
 
-export default function UnityClient() {
-    const baseUrl = "https://brk254.blob.core.windows.net/builds/tabs-vs-spaces-web-0.2";
+export default function UnityClient(props) {
+    const { version } = props;
+    const baseUrl = "https://brk254.blob.core.windows.net/builds/tabs-vs-spaces-web";
+    const url = `${baseUrl}-${version}`
     const { unityProvider, loadingProgression, isLoaded } = useUnityContext({
-        loaderUrl: `${baseUrl}.loader.js`,
-        dataUrl: `${baseUrl}.data`,
-        frameworkUrl: `${baseUrl}.framework.js`,
-        codeUrl: `${baseUrl}.wasm`,
+        loaderUrl: `${url}.loader.js`,
+        dataUrl: `${url}.data`,
+        frameworkUrl: `${url}.framework.js`,
+        codeUrl: `${url}.wasm`,
     });
 
     return (

@@ -3,7 +3,7 @@ import UnityClient from '../UnityClient';
 
 export default function App() {
   const [acceptedTerms, setAcceptedTerms] = useState(false);
-  const version = "0.3";
+  const version = "0.4";
   return (
     <>
       <h1>Tabs vs Spaces - v{version}</h1>

@@ -3,7 +3,7 @@ import { Unity, useUnityContext } from "react-unity-webgl";
 import styles from "./styles.module.css";
 
 function generateConfig(version) {
-  const baseUrl = "https://brk254.blob.core.windows.net/builds/tabs-vs-spaces-web";
+  const baseUrl = "/builds/tabs-vs-spaces-web";
   const url = `${baseUrl}-${version}`
   return {
     loaderUrl: `${url}.loader.js`,
